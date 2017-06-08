@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Modal extends React.Component {
+export class Modal extends React.Component {
   render() {
     // Render nothing if the "show" prop is false
     if(!this.props.show) {
@@ -50,4 +50,3 @@ Modal.propTypes = {
   children: React.PropTypes.node
 };
 
-export default Modal;

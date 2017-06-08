@@ -1,24 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import Modal from './Modal';
+import { ModalMessages } from './constants/modal-messages';
+import { NavBar } from  './components/nav-bar';
+import { Modal } from './components/Modal';
 import './App.css';
-
-class NavBar extends Component {
-  render() {
-    return (
-      <div className="banner">
-        <nav>
-          <ul className="nav-bar">
-            <li className="nav-link"> <a href="">HOME</a></li>
-            <li className="nav-link"> <a href="">ABOUT</a> </li>
-            <li className="nav-link"> <a href="">CONTACT</a></li>
-            <li className="nav-link"> <a href="">HISTORY</a></li>
-          </ul>
-        </nav>
-      </div>
-    );
-  }
-}
 
 class MainContent extends Component {
   constructor(props) {
@@ -55,15 +39,8 @@ class InfoContent extends Component {
                    message: 'Modal text' }
   }
 
-  setText = () => {
-    this.setState({
-      text1: 'Awesome new text'
-    })
-  }
-
   useText = (message) => {
     this.props.handler();
-    console.log(message);
     this.props.outText(message);
   }
 
@@ -73,25 +50,25 @@ class InfoContent extends Component {
       <div className="image-container">
         <div
           className="nature-image"
-          onClick={() => this.useText("Nature image modal text")}
+          onClick={() => this.useText(ModalMessages.nature)}
         >
           <h2
             className="image-quote"> Stroll the paths </h2>
         </div>
         <div
           className="shops-image"
-          onClick={() => this.useText("Shops image modal text")}
+          onClick={() => this.useText(ModalMessages.shops)}
         >
           <h2 className="image-quote"> Savor the Delights</h2>
         </div>
         <div
           className="home-image"
-          onClick={() => this.useText("Home image modal text")} >
+          onClick={() => this.useText(ModalMessages.realEstate)} >
           <h2 className="image-quote"> Live the Dream </h2>
         </div>
         <div
           className="college-image"
-          onClick={() => this.useText("College image modal text")} >
+          onClick={() => this.useText(ModalMessages.colleges)} >
           <h2 className="image-quote"> Find your Future </h2>
         </div>
       </div>
