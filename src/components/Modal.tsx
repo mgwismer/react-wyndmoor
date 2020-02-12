@@ -1,16 +1,17 @@
 import React from 'react';
 
-export class Modal extends React.Component {
-  render() {
-    // Render nothing if the "show" prop is false
-    if(!this.props.show) {
-      return null;
-    }
-    console.log(this.props)
-    console.log(this.props.children);
+type OwnProps = {
+  onClose: () => void;
+  show: boolean;
+  message: string;
+};
+
+export const Modal: React.FC<OwnProps> = ({ onClose, show, message }) => {
+    console.log('modal ', message);
     // The gray background
+    /** @type {{search: React.CSSProperties}} */
     const backdropStyle = {
-      position: 'fixed',
+      position: 'fixed' as 'fixed',
       top: 0,
       bottom: 0,
       left: 0,
@@ -30,23 +31,19 @@ export class Modal extends React.Component {
     };
 
     return (
+      show ? 
       <div className="backdrop" style={backdropStyle}>
         <div className="modal" style={modalStyle}>
-          {this.props.message}
+          {message}
           <div className="footer">
-            <button onClick={this.props.onClose}>
+            <button onClick={onClose}>
               Close
             </button>
           </div>
         </div>
-      </div>
+      </div> : null
     );
   }
-}
 
-Modal.propTypes = {
-  onClose: React.PropTypes.func.isRequired,
-  show: React.PropTypes.bool,
-  children: React.PropTypes.node
-};
+
 
