@@ -1,36 +1,22 @@
-import React, { useState, useCallback } from 'react';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom'
 import { NavBar } from  './components/nav-bar';
-import { Modal } from './components/Modal';
-import { InfoContent} from './components/InfoContent';
-import { MainContent} from './components/MainContent';
+import { HomePage} from './components/HomePage/HomePage';
+import { AboutContent } from './components/AboutContent';
 import './App.css';
 
 const App: React.FC = () => {
-  const [openState, setOpenState] = useState(false);
-  const [textState, setTextState] = useState('');
-
-  const toggleModal = (() => {
-    console.log('open state', openState);
-    setOpenState(!openState)
-  });
-
-  const renderText = useCallback((message: string) => {
-    console.log('inside renderText',message)
-    setTextState(message);
-  }, []);
 
   return (
     <div className="App">
-      <NavBar />
-      <MainContent handler={() => {}}/>
-      <InfoContent handler={toggleModal} outText={renderText} />
-      <Modal
-        show={openState}
-        onClose={toggleModal}
-        message={textState}
-      >
-        This is my modal
-      </Modal>
+      <Router>
+        <NavBar />
+        <Route exact path={'/'} component={HomePage}/>
+        <Route path={'/about'} component={AboutContent} />
+      </Router>
     </div>
   );
 }

@@ -1,10 +1,10 @@
 import React, { useCallback } from 'react';
-import { ModalMessages } from '../constants/modal-messages';
+import { ModalMessages } from '../../constants/modal-messages';
 
 type InfoProps = {
     handler: () => void;
     outText: (message: string) => void;
-  }
+}
   
 export const InfoContent: React.FC<InfoProps> = ({ handler, outText }) => {
   
