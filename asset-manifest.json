@@ -1,11 +1,23 @@
 {
-  "main.css": "static/css/main.993f064b.css",
-  "main.css.map": "static/css/main.993f064b.css.map",
-  "main.js": "static/js/main.a652d5c5.js",
-  "main.js.map": "static/js/main.a652d5c5.js.map",
-  "static/media/chestnut-hill-philadelphia-1.jpg": "static/media/chestnut-hill-philadelphia-1.9e39e9ca.jpg",
-  "static/media/college-photo_22247.jpg": "static/media/college-photo_22247.7bb9586d.jpg",
-  "static/media/l_20130610-fairmount-park-1200.jpg": "static/media/l_20130610-fairmount-park-1200.fea01ece.jpg",
-  "static/media/logo.svg": "static/media/logo.5d5d9eef.svg",
-  "static/media/nicehouse.jpg": "static/media/nicehouse.8b201138.jpg"
+  "files": {
+    "main.css": "/react-wyndmoor/static/css/main.a1610f08.chunk.css",
+    "main.js": "/react-wyndmoor/static/js/main.808d10c7.chunk.js",
+    "main.js.map": "/react-wyndmoor/static/js/main.808d10c7.chunk.js.map",
+    "runtime-main.js": "/react-wyndmoor/static/js/runtime-main.a3841991.js",
+    "runtime-main.js.map": "/react-wyndmoor/static/js/runtime-main.a3841991.js.map",
+    "static/js/2.70143991.chunk.js": "/react-wyndmoor/static/js/2.70143991.chunk.js",
+    "static/js/2.70143991.chunk.js.map": "/react-wyndmoor/static/js/2.70143991.chunk.js.map",
+    "index.html": "/react-wyndmoor/index.html",
+    "precache-manifest.b149c6ffb4cf220d3524ee3b886f6163.js": "/react-wyndmoor/precache-manifest.b149c6ffb4cf220d3524ee3b886f6163.js",
+    "service-worker.js": "/react-wyndmoor/service-worker.js",
+    "static/css/main.a1610f08.chunk.css.map": "/react-wyndmoor/static/css/main.a1610f08.chunk.css.map",
+    "static/js/2.70143991.chunk.js.LICENSE.txt": "/react-wyndmoor/static/js/2.70143991.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/react-wyndmoor/static/media/nicehouse.8b201138.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a3841991.js",
+    "static/js/2.70143991.chunk.js",
+    "static/css/main.a1610f08.chunk.css",
+    "static/js/main.808d10c7.chunk.js"
+  ]
 }
