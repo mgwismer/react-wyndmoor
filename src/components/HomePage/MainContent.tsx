@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from "react";
+import React, { useState, useMemo } from "react";
 
 type MainProps = {
     handler: () => void;
@@ -6,25 +6,25 @@ type MainProps = {
 
 export const MainContent: React.FC<MainProps> = ({ handler }) => {
   
-    const [styleState, setStyleState] = useState<string>('cyan')
-  
-    const toggleColor = useCallback(() => {
-      setStyleState('pink');
-    },[])
+    const [isCyanState, setIsCyanState] = useState<boolean>(true)
   
     const styles = useMemo(() => {
-      return ({ backgroundColor: styleState })
-    }, [styleState])
+      return ({ backgroundColor: isCyanState ? 'cyan' : 'pink' })
+    }, [isCyanState])
     
     return (
       <div
-        className="main-header main-container"
-        onMouseEnter={toggleColor}
+        className="main-container"
+        onMouseEnter={() => setIsCyanState(!isCyanState)}
         onClick={handler}
         style={styles}
       >
-        <div className="main-header">
-          <h1 className="h1-header"> Welcome <br /> to <br /> Wyndmoor </h1>
+        <div className="main-container-header">
+          <h1 className="main-container-heading"> 
+            <p className='main-container-welcome'>Welcome</p>
+            <p className='main-container-to'>to</p> 
+            <p className='main-container-wyndmoor'>Wyndmoor</p>
+          </h1>
         </div>
       </div>
     );

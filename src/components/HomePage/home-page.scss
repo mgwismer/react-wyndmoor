@@ -1,0 +1,95 @@
+.homepage-container {
+  height: 500px;
+}
+
+.main-container {
+    display: flex;
+    height: 500px;
+    background-color: cyan;
+    justify-content: center;
+    align-items: center;
+    .main-container-heading {
+        text-align: center;
+    }
+    .main-container-welcome {
+        animation: fadein 20s infinite;
+        margin: 0;
+    }
+
+    @keyframes fadein {
+        0% {opacity:0;}
+        20% {opacity:1;}
+        80% {opacity:1;}
+        100% {opacity:0;}
+    }
+
+    .main-container-to {
+        color: red;
+        animation: slidein 12s;
+        // margin: 0;
+    }
+
+    @keyframes slidein {
+        0% { margin-left:-1000px; }
+        20% { margin-left:-1000px; }
+        35% { margin-left:0px; }
+        100% { margin-left:0px; }
+    }
+
+    .main-container-wyndmoor {
+        animation: slideup 18s;
+        color: purple;
+        margin: 0;
+    }
+
+    @keyframes slideup {
+        0% { transform: translateY(500px); }
+        20% { transform: translateY(500px); }
+        35% { transform: translateY(0px); }
+        100% { transform: translateY(0px); }
+    }
+  }
+  
+  .image-container {
+    display: inline-flex;
+  }
+  
+  .image-quote {
+    padding: 50px;
+    height: 200px;
+    line-height: 3;
+    margin: 0 auto;
+  }
+  
+  .nature-image {
+    float: left;
+    background-image: url('../../assets/images/l_20130610-fairmount-park-1200.jpg');
+    background-size: 100% 100%;
+    height: 300px;
+    color: white;
+  }
+  
+  
+  .shops-image {
+    float: left;
+    background: url('../../assets/images/chestnut-hill-philadelphia-1.jpg');
+    background-size: 100% 100%;
+    height: 300px;
+    color: blue;
+  }
+  
+  .home-image {
+    float: left;
+    background: url('../../assets/images/nicehouse.jpg');
+    height: 300px;
+    background-size: 100% 100%;
+    color: blue;
+  }
+  
+  .college-image {
+    float: left;
+    background: url('../../assets/images/college-photo_22247.jpg');
+    height: 300px;
+    background-size: 100% 100%;
+    color: white;
+  }

@@ -1,7 +1,8 @@
 import React, { useState, useCallback } from 'react';
 import { MainContent } from './MainContent';
 import { InfoContent } from './InfoContent';
-import { Modal } from '../Modal';
+import { Modal } from '../Modal/Modal';
+import './home-page.scss';
 
 export const HomePage: React.FC = () => {
 
@@ -18,7 +19,7 @@ export const HomePage: React.FC = () => {
     setTextState(message);
   }, []);
     return (
-        <div>
+        <div className='homepage-container'>
             <MainContent handler={toggleModal} />
             <InfoContent handler={toggleModal} outText={renderText}/>
             <Modal

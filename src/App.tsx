@@ -3,10 +3,11 @@ import {
   HashRouter as Router,
   Route
 } from 'react-router-dom'
-import { NavBar } from  './components/nav-bar';
+import { NavBar } from  './components/nav-bar/nav-bar';
 import { HomePage} from './components/HomePage/HomePage';
-import { AboutContent } from './components/AboutContent';
-import './App.css';
+import { AboutContent } from './components/About/AboutContent';
+import { ContactContent } from './components/Contact/ContactContent';
+import './app.scss';
 
 const App: React.FC = () => {
 
@@ -14,8 +15,11 @@ const App: React.FC = () => {
     <div className="App">
       <Router>
         <NavBar />
-        <Route exact path={'/'} component={HomePage}/>
-        <Route path={'/about'} component={AboutContent} />
+        <div className='content-container'>
+          <Route exact path={'/'} component={HomePage}/>
+          <Route path={'/about'} component={AboutContent} />
+          <Route path={'/contact'} component={ContactContent} />
+        </div>
       </Router>
     </div>
   );
