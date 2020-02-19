@@ -3,6 +3,7 @@ import { MainContent } from './MainContent';
 import { InfoContent } from './InfoContent';
 import { Modal } from '../Modal/Modal';
 import './home-page.scss';
+import { FlyingBirds } from '../Birds/flying-birds';
 
 export const HomePage: React.FC = () => {
 
@@ -10,12 +11,10 @@ export const HomePage: React.FC = () => {
   const [textState, setTextState] = useState('');
 
   const toggleModal = (() => {
-    console.log('open state', openState);
     setOpenState(!openState)
   });
 
   const renderText = useCallback((message: string) => {
-    console.log('inside renderText',message)
     setTextState(message);
   }, []);
     return (
@@ -26,8 +25,9 @@ export const HomePage: React.FC = () => {
                 show={openState}
                 onClose={toggleModal}
                 message={textState}
+                title='Dilly Dilly Modal'
             >
-                This is my modal
+                <FlyingBirds />
             </Modal>
         </div>
     )

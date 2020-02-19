@@ -24,21 +24,18 @@
     }
 
     .main-container-to {
-        color: red;
         animation: slidein 12s;
-        // margin: 0;
     }
 
     @keyframes slidein {
-        0% { margin-left:-1000px; }
-        20% { margin-left:-1000px; }
+        0% { margin-left:-1200px; }
+        20% { margin-left:-1200px; }
         35% { margin-left:0px; }
         100% { margin-left:0px; }
     }
 
     .main-container-wyndmoor {
         animation: slideup 18s;
-        color: purple;
         margin: 0;
     }
 

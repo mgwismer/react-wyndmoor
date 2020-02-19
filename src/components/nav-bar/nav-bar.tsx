@@ -1,16 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './nav-bar.scss';
 
-export const NavBar: React.FC = () => {
+type OwnProps = {
+  historyLinkClick: () => void;
+};
+
+export const NavBar: React.FC<OwnProps> = ({ historyLinkClick }) => {
     return (
       <div className="banner">
         <nav>
           <ul className="nav-bar">
-            <li className="nav-link"> <Link to="/">HOME</Link></li>
-            <li className="nav-link"> <Link to="/about">ABOUT</Link> </li>
-            <li className="nav-link"> <Link to="/contact">CONTACT</Link></li>
-            <li className="nav-link"> <a href="https://mgwismer.github.io/PhotoGallery/ThePath.html#buttons">HISTORY</a></li>
+            <li className="nav-link"> <NavLink style={{ textDecoration: 'none' }} to="/">HOME</NavLink></li>
+            <li className="nav-link"> <NavLink style={{ textDecoration: 'none' }} to="/about">ABOUT</NavLink> </li>
+            <li className="nav-link"> <NavLink style={{ textDecoration: 'none' }} to="/contact">CONTACT</NavLink></li>
+            <li className="nav-link"> <div onClick={historyLinkClick}>HISTORY</div></li>
           </ul>
         </nav>
       </div>

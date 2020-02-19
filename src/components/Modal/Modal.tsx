@@ -1,45 +1,35 @@
 import React from 'react';
+import './modal.scss';
 
 type OwnProps = {
   onClose: () => void;
+  onContinue?: () => void;
+  showContinueButton?: boolean;
+  title: string;
   show: boolean;
   message: string;
+  children?: React.ReactNode;
 };
 
-export const Modal: React.FC<OwnProps> = ({ onClose, show, message }) => {
-    console.log('modal ', message);
-    // The gray background
-    /** @type {{search: React.CSSProperties}} */
-    const backdropStyle = {
-      position: 'fixed' as 'fixed',
-      top: 0,
-      bottom: 0,
-      left: 0,
-      right: 0,
-      backgroundColor: 'rgba(0,0,0,0.3)',
-      padding: 50
-    };
-
-    // The modal "window"
-    const modalStyle = {
-      backgroundColor: '#fff',
-      borderRadius: 5,
-      maxWidth: 500,
-      minHeight: 300,
-      margin: '0 auto',
-      padding: 30
-    };
+export const Modal: React.FC<OwnProps> = ({ onClose, onContinue, show, message, title, children, showContinueButton = false }) => {
 
     return (
       show ? 
-      <div className="backdrop" style={backdropStyle}>
-        <div className="modal" style={modalStyle}>
-          {message}
-          <div className="footer">
+      <div className="backdrop">
+        <div className="modal">
+          <h2 className="modal-title">{title}</h2>
+          <div className="modal-message">{message}</div>
+          <div className="modal-footer">
             <button onClick={onClose}>
               Close
             </button>
+            {showContinueButton && 
+              <button onClick={onContinue}>
+                Continue
+              </button>
+            }
           </div>
+          {children}
         </div>
       </div> : null
     );

@@ -72,13 +72,13 @@
     &__try {
         animation: glow 2s infinite;
         transform: scale(1.5);
-        opacity: 0.25;
+        // opacity: 0.25;
     }
 
     @keyframes glow {
         20% {
             background-color: pink;
-            opacity: 0.25;
+            opacity: .75;
         }
         40% {
             background-color: pink;
@@ -86,7 +86,7 @@
         }
         60% {
             background-color: pink;
-            opacity: 1;           
+            opacity: .25;           
         }
         80% {
             background-color: pink;
@@ -94,7 +94,7 @@
         }
         100% {
             background-color: pink;
-            opacity: .25;
+            opacity: .75;
 
         }
     }

@@ -7,10 +7,19 @@
     list-style: none;
     padding: 20px;
     justify-content: flex-end;
-    background-color: #59DC73;
+    background: radial-gradient(ellipse at top, ivory, transparent),
+            radial-gradient(ellipse at bottom, #004C54, transparent);
   }
   
   .nav-link {
     padding: 20px;
+    color: yellow;
+    a {
+      color: yellow;
+    }
+    &:hover, &:focus, a:hover {
+      color: red;
+      cursor: pointer;
+    }
   }
   

@@ -9,7 +9,7 @@ type InfoProps = {
 export const InfoContent: React.FC<InfoProps> = ({ handler, outText }) => {
   
     const setText = useCallback((message) => {
-      console.log('clicked the picture ', message);
+      // console.log('clicked the picture ', message);
       handler();
       outText(message);
     }, [handler, outText])
