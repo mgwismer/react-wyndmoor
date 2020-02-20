@@ -14,7 +14,6 @@ const App: React.FC = () => {
   const [appModalState, setAppModalState] = useState(false);
   
   const setLeaveAppState = () => {
-    console.log('history clicked', appModalState);
     setAppModalState(true);
   }
 

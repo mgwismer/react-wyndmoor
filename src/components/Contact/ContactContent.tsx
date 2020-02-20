@@ -9,7 +9,6 @@ export const ContactContent: React.FC = () => {
     const [buttonState, setButtonState] = useState(0);
 
     const handleButtonClicked = () => {
-        console.log('handle button clicked', buttonState);
         setButtonState(buttonState+1);
     }
 
