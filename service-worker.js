@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/react-wyndmoor/precache-manifest.63452df8c071b1dad2ea60e39bb9ec6a.js"
+  "/react-wyndmoor/precache-manifest.3f1e84414ebcf35bce0f015a7a8a2bbb.js"
 );
 
 self.addEventListener('message', (event) => {
